@@ -1,0 +1,7 @@
+<div class="page-control" ng-show="last_page_number>1">
+	<div class="previous-page icon" ng-show="current_number!=1" ng-click="turn_to(current_number-1)">&#xea38;</div>
+	<span ng-repeat='number in page_numbers' ng-click="turn_to(number)" ng-class="number==current_number?'current-page':''">{{ number }}</span>
+	<span ng-show="last_page_number_show" ng-click="turn_to(last_page_number)">{{ last_page_number_string }}</span>
+	<!-- <input type="number"> -->
+	<div class="next-page icon" ng-show="current_number<last_page_number" ng-click="turn_to(current_number+1)">&#xea34;</div>
+</div>
